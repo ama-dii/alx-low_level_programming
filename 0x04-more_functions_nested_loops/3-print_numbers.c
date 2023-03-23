@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *print_numbers - check for digit 0 to 9.
- *result: alwayS 0
+ *print_numbers - check for digit (0 through 9)
+ *result: always 0
  */
 void print_numbers(void)
 {
