@@ -7,10 +7,10 @@
 
 void print_numbers(void)
 {
-	int number;
+	int x;
 
-	for (number = '0'; number <= '9'; number++)
+	for (x = '0'; x <= '9'; x++)
 	{
-		_putchar(number);
+		_putchar(x + '0');
 	}
 	_putchar('\n');
