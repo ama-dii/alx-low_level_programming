@@ -4,7 +4,7 @@
   *@s: length of sting to be printed
   *Return: Always 0
   **/
-int _strlen_recursion(char *s);
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 	{
