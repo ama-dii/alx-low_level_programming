@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "list,h"
+#include "lists.h"
 
 /**
   *list_len - funct that prints the member od a list
@@ -11,7 +11,7 @@ size_t list_len(const list_t *h)
 {
 	unsigned int mem;
 
-	for (mem = 0; h !=NULL; mem++)
+	for (mem = 0; h != NULL; mem++)
 	{
 		h = h->next;
 	}
