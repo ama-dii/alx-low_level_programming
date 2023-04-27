@@ -4,8 +4,8 @@
 
 /**
   * free_list- funct that frees a list
-  * @head- pointer to pointer of head of linked list
-  * Return- nothing
+  * @head: pointer to pointer of head of linked list
+  * Return: nothing
 **/
 
 void free_list(list_t *head)
