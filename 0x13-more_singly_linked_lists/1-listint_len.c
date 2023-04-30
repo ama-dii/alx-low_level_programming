@@ -1,19 +1,21 @@
 #include "lists.h"
 
 /**
-  * add_nodeint- function that adds a new node at the beginning of a listint_t list.
+  * listint_len- funct that adds new node at the beginning of a listint_t list.
   * @h: linked list first nod
   * Return: new element nod
 **/
 
-listint_t *add_nodeint(listint_t **head, const int n)
+size_t listint_len(const listint_t *h)
 {
-	int num_nod;
+	const listint_t *new_nod = h;
+	size_t count_nex = 0;
 
-	for (num-nod = 0; h != NULL; num_nod++)
+	while (new_nod != NULL)
 	{
-		h = h->next;
+		count_nex += 1;
+		new_nod = new_nod->next;
 	}
-	return (num_nod);
+	return (count_nex);
 
 }
