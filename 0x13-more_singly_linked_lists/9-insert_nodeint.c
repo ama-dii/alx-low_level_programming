@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
-  * insert_nodeint_at_index-
+  * insert_nodeint_at_index- func that inserts a new node at a given position
   * @head: pointer to listint_t head
-  * ind: index of the list where the new node should be added
-  * n: interger to be added
+  * @idx: index of the list where the new node should be added
+  * @n: interger to be added
   * Return: new node or NULL if it fails
 **/
 
