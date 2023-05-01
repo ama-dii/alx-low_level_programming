@@ -15,4 +15,5 @@ void free_listint(listint_t *head)
 		mem_space = head;
 		head = head->next;
 		free(mem_space);
+	}
 }
