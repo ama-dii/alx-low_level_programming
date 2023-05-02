@@ -1,69 +1,37 @@
 #include "lists.h"
 
-/** print_listint_safe-
-  * @head: pointer to const listint_t head
-  * Return:
-**/
-
 /**
- * free_listp - frees a linked list
- * @head: head of a list.
- *
- * Return: no return.
- */
-void free_listp(listp_t **head)
-{
-	listp_t *temp;
-	listp_t *curr;
-
-	if (head != NULL)
-	{
-		curr = *head;
-		while ((temp = curr) != NULL)
-		{
-			curr = curr->next;
-			free(temp);
-		}
-		*head = NULL;
-	}
-}
-
+  * print_listint_safe- func that reverses a listint_t linked list
+  * @head: pointer to const listint_t head
+  * Return:  pointer to the first node of the reversed list
+**/
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nnodes = 0;
-	listp_t *hptr, *new, *add;
-
-	hptr = NULL;
-	while (head != NULL)
-	{
-		new = malloc(sizeof(listp_t));
-
-		if (new == NULL)
-			exit(98);
-
-		new->p = (void *)head;
-		new->next = hptr;
-		hptr = new;
-
-		add = hptr;
-
-		while (add->next != NULL)
-		{
-			add = add->next;
-			if (head == add->p)
-			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				free_listp(&hptr);
-				return (nnodes);
-			}
-		}
-
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-		nnodes++;
-	}
-
-	free_listp(&hptr);
-	return (nnodes);
+const listint_t *T_n = NULL;
+const listint_t *l_n = NULL;
+size_t count = 0;
+size_t New_node;
+T_n = head;
+while (T_n)
+{
+printf("[%p] %d\n", (void *)T_n, T_n->n);
+count++;
+T_n = T_n->next;
+l_n = head;
+New_node = 0;
+while (New_node < count)
+{
+if (T_n == l_n)
+{
+printf("-> [%p] %d\n", (void *)T_n, T_n->n);
+return (count);
+}
+l_n = l_n->next;
+New_node++;
+}
+if (!head)
+exit(98);
+}
+return (count);
 }
