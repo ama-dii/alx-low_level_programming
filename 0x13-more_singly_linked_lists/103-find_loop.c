@@ -1,39 +1,31 @@
 #include "lists.h"
 
 /**
-  * find_listint_loop
-  * @head: pointer to listint_t head
-  * Return: 
-**/
+ * find_listint_loop - func that finds the loop in a linked list
+ * @head: pointer to listint_t head
+ * Return: address of the node where the loop starts, or NULL
+ */
 
 listint_t *find_listint_loop(listint_t *head)
 {
-listint_t *node1, *node2;
-
-if (head == NULL || head->next == NULL)
+listint_t *beg = head;
+listint_t *end_of_list = head;
+if (!head)
 return (NULL);
-
-node1 = head->next;
-node2 = (head->next)->next;
-
-while (node2)
+while (beg && end_of_list && end_of_list->next)
 {
-if (node1 == node2)
+end_of_list = end_of_list->next->next;
+beg = beg->next;
+if (end_of_list == beg)
 {
-node1 = head;
-
-while (node1 != node2)
+beg = head;
+while (beg != end_of_list)
 {
-node1 = node1->next;
-node2 = node2->next;
+beg = beg->next;
+end_of_list = end_of_list->next;
 }
-
-return (node1);
+return (end_of_list);
 }
-
-node1 = node1->next;
-node2 = (node2->next)->next;
 }
-
 return (NULL);
 }
