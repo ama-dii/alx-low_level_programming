@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * binary_to_unit- func that converts a binary number to an unsigned int
+  * binary_to_uint- func that converts a binary number to an unsigned int
   * @b: pointer to const char head
   * Return: result or 0
 **/
